@@ -1,0 +1,24 @@
+db:
+  sql:
+    mysql_default:
+      driver_name: "mysql" # required
+      dsn: "user:pass@tcp(127.0.0.1:3306)/dbname?charset=utf8mb4&parseTime=True&loc=Local" # required
+#      max_idle_conns:
+#      max_open_conns:
+#      conn_max_lifetime:
+#      conn_max_idle_time:
+    postgresql_default:
+      driver_name: "pg"
+      dsn: "postgres://postgres:@localhost:5432/test?sslmode=disable"
+    postgresql_x:
+      driver_name: "pgx"
+      dsn: "user=postgres password=secret host=localhost port=5432 database=pgx_test sslmode=disable"
+    sqlserver_default:
+      driver_name: "mssql"
+#      driver_name: "sqlserver"
+#      driver_name: "azuresql"
+      dsn: "sqlserver://gorm:LoremIpsum86@localhost:9930?database=dbname"
+    sqlite_default:
+      driver_name: "sqliteshim" # required
+      dsn: "sqlite.db" # required
+#       dsn: "file::memory:?cache=shared&_pragma=busy_timeout(10000)&_pragma=journal_mode(WAL)&_pragma=journal_size_limit(200000000)&_pragma=synchronous(NORMAL)&_pragma=foreign_keys(ON)&_pragma=temp_store(MEMORY)&_pragma=cache_size(-16000)"
